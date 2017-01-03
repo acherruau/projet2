@@ -1,0 +1,37 @@
+Virtualisation d'un équipement d'une classe mobile.
+
+Il s'agit de mettre en place sur un pc (éventuellement) portable un
+serveur xen* avec des machines virtuelles. L'une sera une passerelle
+pfsense qui devra importer une configuration existante,
+l'autre une machine sous xubuntu** qui intégrera le serveur de
+gestion des tablettes du chariot.
+
+Les attendus sont les suivants :
+
+1) prises de connaissance et représentation de l'existant sous forme
+visuelle et textuelle dans le Wiki et dans le rapport final.
+
+2) description des étapes et de la méthodologie employée lors de la
+réalisation. Devront notamment apparaitre les étapes clées, les points importants, les difficultés rencontrées.
+
+3) un guide de réalisation pour refaire les étapes de la réalisation
+dans une page wiki (intégrant évidemment au mieux le point 2 et de
+forme très didactique)
+
+4) la validation par tests et essais en situation réelle : branchement
+de la machine configurée réalisée sur les équipements du charriot
+(commutateur réseau / hub usb / bornes wifi / réseau portable) et tests
+avec tablettes.
+
+5) le rapport devra faire apparaitre un diagramme de GANTT du projet
+où les implications et contributions de chacun devront apparaitre.
+
+* le choix de Xen est fortement recommandé. Si un autre choix est
+réalisé, il devra être opensource, pleinement justifié & associé à un
+état de l'art sur les hyperviseurs temps-réel, la virtualisation et la
+paravirtualisation.
+
+** le choix de xubuntu concerne un aspect / problème technique lié à la
+gestion de l'usb et du nombre de périphérique adressable
+simultanément qui, s'il est décrit, expliqué et / ou corrigé pourra faire
+l'objet d'un "bonus". Cette partie est subsidiaire.
