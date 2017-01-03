@@ -1,0 +1,9 @@
+-> Xen server / pfsense
+-> Connaissance des outils à connaitre
+
+Installation de xen server, openXenManager (interface)
+Telechargement de l'iso xubuntu
+
+2 machines à créer sur xen: 
+-1 machine pfsense=routeur/pare-feu
+-1 machine xubuntu  qui intégrera le serveur de gestion des tablettes du chariot.
