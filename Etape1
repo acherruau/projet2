@@ -56,3 +56,5 @@ Création d'une vm contenant l'iso, avec modification de mémoire (1024mb) et aj
 
 Cette ligne supprime une erreur de bootload
 
+--> 13h30: Xen installé, une VM fonctionnelle (xubuntu).
+
