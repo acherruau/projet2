@@ -1,3 +1,5 @@
+[03/01/17]
+
 -> Xen server / pfsense
 -> Connaissance des outils à connaitre
 
@@ -12,8 +14,39 @@ Telechargement de l'iso xenServer pour l'utilisation sur le pc de test
 
 Telechargement de unebootin pour boot la clé usb avec l'iso xen
 
+Problème rencontré: le pc ne reconnait pas l'iso de la clé lors de son boot.
+Essai avec d'autres iso (V6.5): même résultat.
+Essai avec une autre clé: l'iso est reconnu --> Problème avec la clé fournie.
+
+Clé faite avec rufus sous Windows.
+
 //Gant sur TomsPlanner
 Compte: corentin.thebaudin@laposte.net, mdp: coco72
+
+[04/01/17]
+
+Installation de XenServer sur le pc fourni.
+
+MDP: licpro
+config ip statique ou dynamique?
+nom: xenserver
+
+Lancement du server: OK
+
+Creation d'une VM Xubuntu à l'aide de l'iso téléchargé au préalable.
+Premiers essais: Pas de reconnaissance du contenu de la clé contenant l'iso de xubuntu
+
+Creation d'un template sur le xen server
+
+Tempalte: Other install media --> vm install from other media 
+UUID: 574e7c4c-a256-d5b3-25ba-469396b11f8a
+
+VM UUID: d6bd1ae2-99db-5215-042e-10222959340d
+
+xe vm-install template=Other\ install\ media nw-name-label=xubuntuVM
+-->UUID renvoyé
+
+OpenXenManager--> Connecté en filaire à la machine
 
 
 
