@@ -48,5 +48,11 @@ xe vm-install template=Other\ install\ media nw-name-label=xubuntuVM
 
 OpenXenManager--> Connecté en filaire à la machine
 
+Copie de l'iso xubuntu sur la machine par ssh, copie dans le dossier contenant les iso de xen
 
+Création d'une vm contenant l'iso, avec modification de mémoire (1024mb) et ajout de la ligne suivante:
+
+#xe vm-param-set uuid=[Virtual Machine UUID] HVM-boot-policy=BIOS\ order HVM-boot-params:order=dc
+
+Cette ligne supprime une erreur de bootload
 
