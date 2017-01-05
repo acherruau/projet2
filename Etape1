@@ -58,3 +58,37 @@ Cette ligne supprime une erreur de bootload
 
 --> 13h30: Xen installé, une VM fonctionnelle (xubuntu).
 
+[05/01/17]
+
+Installation de la vm pfsense (voir http://www.sky-future.net/wp-content/uploads/2015/01/Installation+pfSense.pdf)
+
+Telechargement de l'iso disponible sur le site pfsense
+Ajout de l'iso dans le dossier 
+
+Problème rencontré: la vm se boot a chaque lancement
+Solution testée: Suppression de l'iso après le lancement -> KO
+--> Appui sur f1 pour lancer pfsense
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
