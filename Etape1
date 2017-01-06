@@ -1,6 +1,7 @@
 [03/01/17]
 
 -> Xen server / pfsense
+https://fr.wikipedia.org/wiki/Xen   /   https://fr.wikipedia.org/wiki/Pfsense
 -> Connaissance des outils à connaitre
 
 Installation de xen server, openXenManager (interface)
@@ -69,7 +70,13 @@ Problème rencontré: la vm se boot a chaque lancement
 Solution testée: Suppression de l'iso après le lancement -> KO
 --> Appui sur f1 pour lancer pfsense
 
+https://services.renater.fr/ntp/serveurs_francais
 
+mdp pfsense web : admin / licpro, xubuntu: mdp=licpro
+
+tools not installed?
+
+Accès à l'interface de gestion pfsense depuis le web: OK (taper l'adresse du serveur pfsense)
 
 
 
