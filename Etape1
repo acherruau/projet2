@@ -112,11 +112,13 @@ Recherche connexion tablette
 Pas de reconnaissance de l'usb:
 
 lsusb reconnait la connexion, mais pas le server ni la vm.
+lscpi, fdisk -l
+
 La tablette le reconnait pas la connexion non plus.
 
 -> Pilote? Noyau?
 
-
+Essai Xenserver DDK.iso
 
 
 
