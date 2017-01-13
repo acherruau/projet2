@@ -103,9 +103,18 @@ Test sur ordi de Corentin -> Pas de crash, si crash -> attente pour relancement
 
 Problème de connexion à l'interface web de pfSense
 
-Solution: ajout d'une gateway (192.168.99.255)
+Solution: ajout d'une gateway (192.168.99.254)
 
-[12/01/17]
+[12/01/17 & 13/01/17]
+
+Recherche connexion tablette
+
+Pas de reconnaissance de l'usb:
+
+lsusb reconnait la connexion, mais pas le server ni la vm.
+La tablette le reconnait pas la connexion non plus.
+
+-> Pilote? Noyau?
 
 
 
