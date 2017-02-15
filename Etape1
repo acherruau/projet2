@@ -94,7 +94,6 @@ setxkbmap us -> clavier en azerty
 
 xe vm-param-set platform:cores-per-socket=’4’ uuid=<VM UUID from Step1> -> nombre de cores per processor
 
-
 xe vm-param-set VCPUs-at-startup='2' uuid=<VM-UUID>  -> nombre de vCpu au départ
 
 xe vm-param-set VCPUs-max='4' -> nombre de vcpu max
@@ -116,25 +115,42 @@ lscpi, fdisk -l
 
 La tablette ne reconnait pas la connexion non plus.
 
--> Pilote? Noyau?
+-> Pilote? nope. Noyau? nope.
 
 Essai Xenserver DDK.iso
 
 [13/02/17]
 
-Recherche connexion tablette
+Recherche connexion tablette.
 commandes : lsusb, lscpi, montageduport
 
 Activation du port -> tablette reconnu
-Possibilité d'observer le contenu de la tablette.
+Possibilité d'accéder au contenu de la tablette.
 
-Crash de Xubuntu -> Chargement snapshot
+Crash de Xubuntu -> Chargement snapshot.
 
 3 ports -> Crash de la VM provenant du port 1d et 1a (surement des ports a ne pas utiliser, interne au systême).
 
-déblocage du port 45, deux ports usb disponible
-les autres ne sont pas reconnus.
+Déblocage du port 45, deux ports usb disponible, les autres ne sont pas reconnus.
 
-Test du script pour tablette, il ne se lance pas -> relecture du pdf réinstallation de xubuntu 64 bits.
+Test du script pour tablette, il ne se lance pas -> fonctionnel seulement avec Xubuntu 64 bits.
 
+[14/02/17]
 
+Réinstallation d'une VM Xubuntu 64 bits.
+
+Test du script -> il se lance et fonctionne correctement.
+
+[15/02/16]
+
+Analyse des différents script disponible pour les tablettes.
+
+cf: rapport_ter_fourmond_noel chap 'les scripts'.
+
+Téléchargement des ressources suivantes :
+sudo apt-get install android-tools-adb android-tools-fastboot
+sudo add-apt-repository ppa:nilarimogard/webupd8
+
+Lancement script scripts.sh -> Téléchargement de l'application 'compagnon' et de tous les scripts.
+
+Création du fichier devices.txt -> Ajout de tous les ID des tablettes
