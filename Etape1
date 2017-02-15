@@ -1,7 +1,7 @@
 [03/01/17]
 
 -> Xen server / pfsense
-https://fr.wikipedia.org/wiki/Xen   /   https://fr.wikipedia.org/wiki/Pfsense
+
 -> Connaissance des outils à connaitre
 
 Installation de xen server, openXenManager (interface)
@@ -61,7 +61,7 @@ Cette ligne supprime une erreur de bootload
 
 [05/01/17]
 
-Installation de la vm pfsense (voir http://www.sky-future.net/wp-content/uploads/2015/01/Installation+pfSense.pdf)
+Installation de la vm pfsense (voir sources)
 
 Telechargement de l'iso disponible sur le site pfsense
 Ajout de l'iso dans le dossier 
@@ -69,8 +69,6 @@ Ajout de l'iso dans le dossier
 Problème rencontré: la vm se boot a chaque lancement
 Solution testée: Suppression de l'iso après le lancement -> KO
 --> Appui sur f1 pour lancer pfsense
-
-https://services.renater.fr/ntp/serveurs_francais
 
 mdp pfsense web : admin / licpro, xubuntu: mdp=licpro
 
@@ -154,3 +152,11 @@ sudo add-apt-repository ppa:nilarimogard/webupd8
 Lancement script scripts.sh -> Téléchargement de l'application 'compagnon' et de tous les scripts.
 
 Création du fichier devices.txt -> Ajout de tous les ID des tablettes
+
+Lancement du script ListeDevice/ListeDeviceConnected -> Alors que la tablette prété (21) est bien connecté et reconnu par l'ordianteur, elle n'est pas afficher à l'exécution du script.
+
+Problème venant peut être de la complétion du mauvais fichiers deviices.txt ?
+Non, puisque lors de la complétion de l'autre fichiers devices.txt, toujours pas reconnu.
+L'erreur venait du mode débogage usb de la tablette, il doit être activé.
+
+Problème de ping entre les différentes VM -> Reconfiguration du PfSense.
