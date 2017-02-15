@@ -114,22 +114,27 @@ Pas de reconnaissance de l'usb:
 lsusb reconnait la connexion, mais pas le server ni la vm.
 lscpi, fdisk -l
 
-La tablette le reconnait pas la connexion non plus.
+La tablette ne reconnait pas la connexion non plus.
 
 -> Pilote? Noyau?
 
 Essai Xenserver DDK.iso
 
+[13/02/17]
 
+Recherche connexion tablette
+commandes : lsusb, lscpi, montageduport
 
+Activation du port -> tablette reconnu
+Possibilité d'observer le contenu de la tablette.
 
+Crash de Xubuntu -> Chargement snapshot
 
+3 ports -> Crash de la VM provenant du port 1d et 1a (surement des ports a ne pas utiliser, interne au systême).
 
+déblocage du port 45, deux ports usb disponible
+les autres ne sont pas reconnus.
 
-
-
-
-
-
+Test du script pour tablette, il ne se lance pas -> relecture du pdf réinstallation de xubuntu 64 bits.
 
 
