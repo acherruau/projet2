@@ -175,3 +175,29 @@ Changement du fichier de configuration PfSense par celui donné par le responsab
 
 Réinstallation complète de PfSense, snapshot enrergistré. 
 
+Rendez-vous avec Éric, compte rendu de l'avancement du projet.
+
+Avancement du projet:
+Xubuntu, PfSense et Xen communique très bien ensemble.
+Possibilité d'avoir accès à deux ports de la machine et donc possibilité d'explorer le contenu d'une tablette ainsi que de lancer les différents scripts donné.
+
+Reste du projet: Borne Wi-Fi à gérer (mais il faut qu'elle soit directement connecté au PfSense pour pouvoir les paramétrer)
+Changement de configurtion pfSense (possible mais il faut un accès internet depuis le pfSense).
+
+Problèmes:
+Avec PfSense, besoin des bornes Wi-Fi pour pouvoir paramétrer le Wi-Fi avec PfSense.
+Avec PfSense, besoin du chariot pour tester la connectivité des hubs et des tablettes.
+
+	Pour commencer, au niveau de la VM Xubuntu, il voudrait des hypothèses/explications sur le fait que la première installation de Xubuntu 64 bits était lente et bugait. (Il demande pas d'explications précises c'est juste "scientifique" comme il dit, il veut notre point de vue sur le problème: dimenssionnement? ram ordinateur? autre? etc.
+Au niveau du chariot, il ne sera pas accessible avant le vendredi 03 Mars parce qu'il y a plein de monde qui l'utilise et le jeudi 02 Mars il en a besoin pour un examen. Donc il nous a préter un hub usb 2.0 avec 3 ports pour vérifier si déjà on a bien accès à plusieurs tablettes en même temps.
+
+	Pour ce qui est du wiki, il voudrait un schéma avec toutes les machines, VMs et les liens qu'elles ont entre elles (nottament les interfaces vu qu'on a eut un problème avec celle du PfSense mais aussi afficher toutes nos démarches, hypotèses et solution pour les ports USB et les prochain paragraphe qu'on écrira.
+
+	Pour le problème que l'on a avec PfSense et le changement de configuration avec le fixhier xml qu'il nous a donné, deux solutions s'offre à nous :
+- soit, on rend notre machine comme un routeur qui fera un lien direct sur eduroam et après c'est trop brouillon pour que je vous explique mdr mais il m'a parler d'adresse IP  en 10.10.etc.
+- ou alors, on lui donne la MAC virtuelle de PfSense et encore une fois je peux pas vous expliquer ce qu'il en fera pcq c'est trop brouillon mdr.
+
+	Pour le Wi-Fi et les bornes, elles seront accessible avec le chariot donc en attendant il va nous préter quelque chose pour tester le Wi-Fi. Enuiste il m'a fait un dessin du système comme il est et les deux bornes USB sont reliées à un commutateur.
+Donc si j'ai bien compris, on doit être capable de gérer les tablettes soit par USB soit par Wi-Fi selon les connexions.
+
+Pour finir, la partie dans le wiki avec "Le paramétrage se fait à l'aide du logiciel Apple Airport de l'iPad" nous est complètement inutile, c'était juste une phrase explicative (soit dit en passant extremement mal expliqué) pour nous dire que le paramétrage des bornes Wi-Fi est déjà fait (par lui même) et qu'il l'a réalisé avec l'ipad.
