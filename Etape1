@@ -123,6 +123,7 @@ Recherche connexion tablette.
 commandes : lsusb, lscpi, montageduport
 
 Activation du port -> tablette reconnu
+
 Possibilité d'accéder au contenu de la tablette.
 
 Crash de Xubuntu -> Chargement snapshot.
@@ -143,7 +144,7 @@ Test du script -> il se lance et fonctionne correctement.
 
 Analyse des différents script disponible pour les tablettes.
 
-cf: rapport_ter_fourmond_noel chap 'les scripts'.
+cf: chapître 'les scripts' rapport_ter_fourmond_noel
 
 Téléchargement des ressources suivantes :
 sudo apt-get install android-tools-adb android-tools-fastboot
@@ -159,4 +160,18 @@ Problème venant peut être de la complétion du mauvais fichiers deviices.txt ?
 Non, puisque lors de la complétion de l'autre fichiers devices.txt, toujours pas reconnu.
 L'erreur venait du mode débogage usb de la tablette, il doit être activé.
 
-Problème de ping entre les différentes VM -> Reconfiguration du PfSense.
+Problème de ping entre les différentes VM -> Plusieurs questions nous viennent:
+Problème de réseau (network, NAT...) ? Non, par défaut le réseau est distribué aux autre VM par pont.
+Conflit entre PfSense et Xen ? Non.
+À quoi sert l'adaptateur usb ethernet ? Uniquement utilisé pour configurer le WAN de PfSense.
+Paramétrage réseau de Xen à revoir ? La commande 'route' et son contenu n'est pas clair.
+
+[16/02/16]
+
+Pour trouver le problème, on a chargé le snapshot de la version Xubuntu 32 bits qui arrivait à pinger l'autre VM ainsi que le serveur -> l'adresse MAC de l'interface devait être générer automatiquement alors qu'à la réinstallation de Xubuntu 64 bits, nous avions copier l'adresse MAC de la version 32 bits.
+
+Changement du fichier de configuration PfSense par celui donné par le responsable du projet (mot de passe, domaine...) pour tester si notre système fonctionne bien avec une autre configuration.
+-> PfSense crash, réinstallation de la snapshot, snapshot crash aussi;
+
+Réinstallation complète de PfSense, snapshot enrergistré. 
+
