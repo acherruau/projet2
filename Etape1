@@ -188,3 +188,13 @@ Problèmes:
 Avec PfSense, besoin des bornes Wi-Fi pour pouvoir paramétrer le Wi-Fi avec PfSense.
 Avec PfSense, besoin du chariot pour tester la connectivité des hubs et des tablettes.
 
+[27/02/17]
+
+Liste des problèmes/solutions:
+
+- Problème de gestion usb, seulement 13 tablettes de reconnues
+  --> Noyau? Configuration du noyau?
+  --> CentOS? Autorisations?
+  --> Matériel? Problème d'alimentation? Test de débranchement d'une tablette, une autre est prise en compte? Bracher l'ordi sur secteur?
+  --> Port USB, Hardware?
+
