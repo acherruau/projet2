@@ -256,3 +256,20 @@ Branchement de l'ordinateur sur secteur ?
 Solutions:
 
 --> 
+
+
+
+Date : 28/02/16
+
+Problèmes rencontrés:
+
+(Réinstallation de XenServer)
+Changement des interfaces à l'intérieur de XenServer.
+
+Hypothèses:
+
+Adaptateur USB-Ethernet remarqué pendant l'installation ?
+
+Essais:
+
+Réinstallation de XenServeur sur VirtualBox -> Problème d'installation au niveau du bios (problème de mémoire ).
