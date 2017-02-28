@@ -198,3 +198,7 @@ Liste des problèmes/solutions:
   --> Matériel? Problème d'alimentation? Test de débranchement d'une tablette, une autre est prise en compte? Bracher l'ordi sur secteur?
   --> Port USB, Hardware?
 
+[28/02/17]
+
+Ajout de la carte réseau pour dissosier les deux sorties du xen:
+https://support.citrix.com/article/CTX121615
