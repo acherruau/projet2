@@ -1,0 +1,258 @@
+Date : 03/01/17
+
+Problème rencontré:
+
+(Installation XenServer)
+Le pc ne reconnait pas l'iso de la clé lors de son boot.
+
+Essais:
+
+Formatage de la clé -> même résultat.
+Essai avec d'autres iso (version 6.5) -> même résultat.
+Essai avec une autre clé -> l'iso est reconnu.
+
+Solution:
+
+--> Problème matériel avec la clé fournie.
+
+
+
+Date : 04/01/17
+
+Problème rencontré:
+
+(Installation VM Xubuntu)
+Premiers essais de l'installation de la VM Xubuntu, pas de reconnaissance du contenu de la clé contenant l'iso de xubuntu.
+
+Essais:
+
+Envoie direct de l'iso en ssh en ce connectant à XenSeerver.
+
+Solutions:
+
+--> Creation d'un template sur le xen server.
+
+
+
+Date : 05/01/17
+
+Problème rencontré:
+
+(Installation VM PfSense)
+La VM PfSense se réinstalle à chaque lancement de la VM (au boot).
+
+Hypothèses:
+
+Mauvaise installation de PfSense ?
+Version de PfSense déffectueuse ?
+
+Essais:
+
+Suppression de l'iso après le lancement.
+
+Solutions:
+
+--> Appui sur la touche f1 pour lancer PfSense après suppression de l'iso.
+
+
+
+Problème rencontré:
+
+(Connexion XenServer avec OpenXenManager)
+Lors de la connexion avec XenServer en utilisant l'interface, problème d'affichage ("tools not installed").
+
+Hypothèses:
+
+Mises à jour du logiciel ?
+Erreur dans la tâche de fond lors du lancement des installations ?
+Mauvaise installation de OpenXenManager ?
+
+Essais:
+
+Utilisation de XenCenter sur un poste Windows (même logiciel).
+
+Solutions:
+
+--> Tools et mises à jour installés grâce à l'interface Windows.
+
+
+
+Date : 10/01/17
+
+Problème rencontrés:
+
+(Connexion PfSense avec le terminal de Xubuntu)
+Problème de connexion à l'interface web de pfSense.
+
+Hypothèses:
+
+Paramétrage réseau de PfSense mal fait ?
+Instalaltion de PfSense mal réalisé ?
+
+Essais:
+
+Réinstallation de PfSense -> pas de changement.
+
+Solutions:
+
+--> Ajout d'une gateway (192.168.99.254)
+
+
+
+Date : 12/01/17
+
+Problème rencontrés:
+
+(Connexion USB d'une tablette)
+Recherche connexion d'une tablette, pas de reconnaissance de l'usb.
+
+Hypothèses:
+
+Protocole MTP non géré par le noyau/le port USB ?
+Pilote du port USB pas à jour ?
+Port USB non monter à la base ?
+
+Essais:
+
+Branchement clé USB -> Bien repéré par le système.
+		    -> Confirmation de l'hypothèse sur le protocole MTP ?
+
+Solutions:
+
+--> Activation du port avec les commandes lsusb, lscpi, xe.							(a revoir)
+
+
+
+Date : 13/02/17
+
+Problème rencontrés:
+
+(Connexion USB d'une tablette)
+Crash de la VM Xubuntu lors d'activation de tous les ports de XenServer.
+
+Hypothèses:
+
+Ports séries à ne pas activer (interne au système) ?
+
+Essais:
+
+provenant du port 1d et 1a (surement des ports a ne pas utiliser, interne au systême).
+
+Solutions:
+
+--> Déblocage du port 45, deux ports usb disponible, les autres ne sont pas reconnus.
+
+
+
+Problème rencontrés:
+
+(Connexion USB d'une tablette - Test des scripts)
+--> Test des scripts pour tablette, il ne se lancent pas.
+
+Hypothèses:
+
+Mauvaise manipulation avec l'activation des ports ?
+
+Essais:
+
+Réinstallation de Xubuntu en 64bits -> Les scripts sont fonctionnels.
+
+Solutions:
+
+--> Scripts fonctionnels seulement sur une version Xubuntu 64 bits.
+
+
+
+Date : 15/02/17
+
+Problème rencontrés:
+
+(Connexion USB d'une tablette - Test des scripts)
+Lancement du script ListeDevice/ListeDeviceConnected, la tablette (id:21 remarqué par l'ordinateur) n'est pas remarqué par le script.
+
+Hypothèses:
+
+Le fichier device.txt pas bien complété ?
+Complétion du mauvais fichier device.txt ?
+L'ordinateur à t'il accès aux informations de la tablette (mode développeur, débogage... etc) ?
+
+Essais:
+
+Modification de l'autre fichier device.txt -> Toujours pas reconnu après ces modifications.
+Mise de la tablette en mode débogage -> Elle est bien reconnu par les scripts.
+
+Solutions:
+
+--> L'erreur venait du mode débogage usb de la tablette, il doit être activé.
+
+Problèmes rencontrés:
+
+(Connexion XenServeur/PfSense/Xubuntu)
+Problème de ping entre les différentes VM.
+
+Hypothèses:
+
+Problème de réseau (network, NAT...) ? Non, par défaut le réseau est distribué aux autre VM par pont.
+Conflit entre PfSense et Xen ?
+À quoi sert l'adaptateur usb ethernet ? Uniquement utilisé pour configurer le WAN de PfSense.
+Paramétrage réseau de Xen à revoir ? La commande 'route' et son contenu n'est pas clair (que deux lignes après paramétrage du réseau).
+
+Essais:
+
+Chargement snapshot pour voir la différence -> Adresse MAC de l'interface différente
+
+Solutions:
+
+--> L'adresse MAC de l'interface devait être générer automatiquement alors qu'à la réinstallation de Xubuntu 64 bits, nous avions copier l'adresse MAC de la version 32 bits.
+
+
+
+Date : 16/02/17
+
+Problèmes rencontrés:
+
+(Chargement fichier de configuration PfSense)
+Modification du fichier de configuration PfSense par celui donné par le responsable du projet (mot de passe, domaine...) pour tester si notre système fonctionne bien avec une autre configuration.
+PfSense crash lors de l'insertion du fichier de configuration éxistant.
+
+Hypothèses:
+
+Problème de version entre notre fichier de configuration et celui d'avant ?
+Conflit de version entre les deux versions de PfSense ?
+Acces à internet impossible en passant par le serveur de l'iut (login et mdp) ?
+
+Essais:
+
+Modification du fichier de configuration d'avant pour le mettre à niveau -> Beaucoup trop de différence entre les deux fichiers XML.
+
+Solutions:
+
+--> Problème venant de l'acces au réseau puisque PfSense tente de se mettre à jour avec le fichier de configuration.
+2 Solutions s'offre à nous :	- Mettre l'ordinateur en mode commutateur.
+				- Donner au responsable l'adresse MAC physique de l'ordinateur et l'adresse MAc virtuelle de la VM pour avoir un acces direct au réseau.
+
+
+
+Date : 17/02/16
+
+Problèmes rencontrés:
+
+(Test pour valider le système)
+Connexion du chariot au PC contenant les VMs, seul 13 tablettes sur 40 sont repérées (il en faut au moins 20).
+
+Hypothèses:
+
+Test réalisé hors tension, peut être pas assez de courant pour pouvoir alimenté tous les ports USB ?
+Toutes les tablettes sont-elles en mode débogage ?
+Le noyau ou la configuration du noyau de l'ordinateur permet t'il de voir un nombre limité de tablettes ?
+As t'on les autorisations via CentOs ?
+Le port USB possède t'il le bon hardware ?
+
+Essais:
+
+Test de débranchement d'une tablette, une autre est prise en compte ?
+Branchement de l'ordinateur sur secteur ?
+
+Solutions:
+
+--> 
