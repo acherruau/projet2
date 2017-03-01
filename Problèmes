@@ -263,13 +263,38 @@ Date : 28/02/16
 
 Problèmes rencontrés:
 
-(Réinstallation de XenServer)
+(Connecion réseau avec XenServer)
 Changement des interfaces à l'intérieur de XenServer.
 
 Hypothèses:
 
-Adaptateur USB-Ethernet remarqué pendant l'installation ?
+Adaptateur USB-Ethernet a branché avant l'installation ?
+Adaptateur USB-Ethernet défectueux ?
+Port USB non fonctionnel ?
 
 Essais:
 
 Réinstallation de XenServeur sur VirtualBox -> Problème d'installation au niveau du bios (problème de mémoire ).
+Tester un autre adaptateur USB-Ethernet -> Remarqué par l'ordinateur.
+
+Solutions:
+
+--> Problème matériel avec l'adaptateur USB-Ethernet.
+
+
+
+Date : 01/03/17
+
+Problèmes rencontrés:
+
+(Lancement des VMs)
+Pas d'affichage graphique des VMs Xubuntu et PfSense.
+
+Hypothèses:
+
+Mises à jour déffectueuses de XenServer avec la version 7.0 ?
+Passer à la version 7.1 ?
+
+Solutions:
+
+--> Réinstallation complète de XenServer/Xubuntu/PfSense
