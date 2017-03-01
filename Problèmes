@@ -298,3 +298,12 @@ Passer à la version 7.1 ?
 Solutions:
 
 --> Réinstallation complète de XenServer/Xubuntu/PfSense
+
+Problèmes rencontrés:
+
+(Installation du système)
+Problème lors de l'installation de XenServer sur VirtualBox.
+
+Solutions:
+
+--> Problème matériel avec la mémoire du PC (4 Gio de RAM).
