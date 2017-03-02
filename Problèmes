@@ -316,6 +316,9 @@ Problèmes rencontrés:
 
 (Modification des VMs)
 Changement des interfaces des VMs, elles se sont éffacés.
+suite suivi http://wiki.mesouug.com/index.php/XCP_/_Xenserver#Missing_IP_for_Management_interface
+les vms se sont effacées réinstallation de celle ci
+
 
 Hypothèses:
 
