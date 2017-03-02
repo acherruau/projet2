@@ -307,3 +307,22 @@ Problème lors de l'installation de XenServer sur VirtualBox.
 Solutions:
 
 --> Problème matériel avec la mémoire du PC (4 Gio de RAM).
+
+
+
+Date : 01/03/17
+
+Problèmes rencontrés:
+
+(Modification des VMs)
+Changement des interfaces des VMs, elles se sont éffacés.
+
+Hypothèses:
+
+Mises à jour déffectueuses de XenServer avec la version 7.0 ?
+Passer à la version 7.1 ?
+
+Solutions:
+
+--> Suivi du tuto gérant l'erreur récontrer
+
