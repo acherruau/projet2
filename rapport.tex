@@ -5,6 +5,13 @@
 \usepackage[pdftex]{graphicx}
 \usepackage{url}
 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+
+
+
 
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
@@ -12,6 +19,15 @@
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 %opening
 
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[C]{\textbf{page \thepage}} 
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{LaTeX}
+
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[C]{\textbf{page \thepage}} 
+
+\fancyfoot[L]{\leftmark}
 
 
 \begin{document}
@@ -102,11 +118,9 @@ exemple liste
 \section{Références}
 
 ex :
-\url{www.google.fr}\\
+\url{www.google.fr}\
 
-\begin{center}
-\paragraph{Rapport rédigé en LATEX}
-\end{center}
+
 
 
 \end{document}
