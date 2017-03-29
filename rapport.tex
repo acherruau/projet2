@@ -194,7 +194,8 @@ Xubuntu est un système d'exploitation libre de type GNU/Linux. C'est un projet 
 
 \paragraph{Dans le projet\\}
 
-Nous utilisons dans notre versions la Xubuntu 16.04, Xenial Xerus qui est la dernière version de Xubuntu. C’est une version 64 bits puisque que l’ordinateur prêté est un 64 bits. De plus les scripts développés par les étudiants sont adaptés pour une machine en 64 bits. Le choix de xubuntu est dû au fait que c’est un version plus légère de linux et cela permet sur une machine virtuelle d’économiser les ressources et d’avoir une machine virtuelle plus stable.
+Nous utilisons dans notre versions la Xubuntu 16.04, Xenial Xerus qui est la dernière version de Xubuntu. C’est une version 64 bits puisque que l’ordinateur prêté est un 64 bits. De plus les scripts développés par les étudiants sont adaptés pour une machine en 64 bits.
+Le choix de xubuntu est dû au fait que c’est un version plus légère de linux et cela permet sur une machine virtuelle d’économiser les ressources et d’avoir une machine virtuelle plus stable.
 Le xubuntu va nous permettre de voir les tablettes et d’utiliser les script de gestion des tablettes. \\
 Le choix de Xubuntu était imposé dès le début du projet car en prenant une Ubuntu par exemple, il y aurait eu  un problème sur le nombre de tablette détecté par ubuntu. La prise en charge de multiple matériel sur un usb est bloqué à sept sur Ubuntu d'où le choix de Xubuntu pour voir nos 40 tablettes. 
 Pour le fonctionnement des scipt le kit de développement (SDK) d’android ADB a été ajouté à la machine.
@@ -208,35 +209,56 @@ Travaillant sous linux il nous fallait un logiciel pouvant se connecter à notre
 \includegraphics[scale=0.70]{openxenmanager}
 \end{center}
 
-\paragraph{exemple paragraphe}
-\subparagraph{}
+\section{Etat final du projet}
+\subsection{Présentation final du système}
+
+\paragraph{}
+Dans notre projet final nous avons un ordinateur tournant sous xenserver. Celui ci contient les machines virtuelles pfSense et xubuntu. PfSense a deux cartes réseaux, celle de l’ordinateur pour le lan et l’adaptateur usb/ethernet pour le wan. Deux ports usb de l’ordinateur sont vu par le Xubuntu. 
+En reliant l’ordinateur au chariot nous voyons les 40 tablettes sous Xubuntu. Nous pouvons utiliser le script des gestions tablettes pour vérifier le nombre de connecté et celle qui n’y sont pas. 
+
+\clearpage
+\paragraph{Schéma du chariot détaillé}
+\begin{center}
+\includegraphics[scale=0.65]{chariot}\\
+\end{center}
+
+\subsection{Améliorations}
+
+\paragraph{}
+Dans notre projet final nous avons un ordinateur tournant sous xenserver. Celui ci contient les machines virtuelles pfSense et xubuntu. PfSense a deux cartes réseaux, celle de l’ordinateur pour le lan et l’adaptateur usb/ethernet pour le wan. Deux ports usb de l’ordinateur sont vu par le Xubuntu. 
+En reliant l’ordinateur au chariot nous voyons les 40 tablettes sous Xubuntu. Nous pouvons utiliser le script des gestions tablettes pour vérifier le nombre de connecté et celle qui n’y sont pas. 
+
+
+\section{Problèmes rencontrés}
+
+\subsection{Problèmes matériels}
+
+\paragraph{nomProbleme\\}
+description probleme
+
+Hypothèse :
+\begin{itemize}
+\item hypothèse 1
+\item hypothèse 2 \\
+\end{itemize}
+
+Solution :
 blabla
 
-\paragraph{exemple paragraphe}
-\subparagraph{}
 
-\paragraph{exemple paragraphe}
-\paragraph{}
+\subsection{Problèmes logiciels}
+
+
+
+
+\clearpage
 
 \paragraph{exemple commande}
 \begin{verbatim}
  ex commande
 \end{verbatim}
 
-\clearpage
-\section{exemple partie}
-\subsection{exemple sous partie}
-\paragraph{}
 
-exemple liste
-\begin{itemize}
-\item item 1
-\item item 2 
-\item item 3
-\end{itemize}
-
-
-\clearpage
 \section{Références}
 
 ex :
