@@ -4,6 +4,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[pdftex]{graphicx}
 \usepackage{url}
+\usepackage{caption}
+\usepackage{multirow}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -190,12 +192,25 @@ PfSense est à la version 2.3.2 qui, au moment de l’installation, était la de
 \begin{center}
 \includegraphics[scale=0.65]{pfsense}\\
 \end{center}
+\paragraph{}
+PfSense peut être piloté par une interface web accessible depuis la machine virtuelle Xubuntu. La configuration s’est faite via le fichier de configuration de pfSense utilisé sur l’ancienne version du chariot.\\
 
-PfSense peut être piloté par une interface web accessible depuis la machine virtuelle Xubuntu. La configuration s’est faite via le fichier de configuration de pfSense utilisé sur l’ancienne version du chariot.
 
-\paragraph{Configuration de pfsense :}
-
-  TABLEAU
+\paragraph{}
+\begin{table}[!h]
+\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+\hline
+ & Configuration minimale & Configuration recommandée & Configuration choisie\\
+\hline 
+Processeur & 500 MHz & 1 GHz & 512 MHz\\
+\hline
+Mémoire vive & 512 Mo & 1 Go & 512 Mo \\
+\hline
+Stockage & >1 Go & & 15 Go \\
+\hline
+\end{tabular}
+\caption{Configuration de pfsense}
+\end{table}
 
 
 \subsection{Xubuntu}
@@ -212,9 +227,22 @@ Le xubuntu va nous permettre de voir les tablettes et d’utiliser les script de
 Le choix de Xubuntu était imposé dès le début du projet car en prenant une Ubuntu par exemple, il y aurait eu  un problème sur le nombre de tablette détecté par ubuntu. La prise en charge de multiple matériel sur un usb est bloqué à sept sur Ubuntu d'où le choix de Xubuntu pour voir nos 40 tablettes. 
 Pour le fonctionnement des scipt le kit de développement (SDK) d’android ADB a été ajouté à la machine.
 
-\paragraph{Configuration de Xubuntu :}
+\paragraph{\\}
+\begin{table}[!h]
+\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 
-  TABLEAU
+\hline
+ & Configuration  minimale & Configuration recommandée & Configuration choisie\\
+\hline 
+Processeur & 750 MHz & 1,6 GHz & 1,6 MHz\\
+\hline
+Mémoire vive & 512 Mo & 2 Go & 2 Go \\
+\hline
+Stockage & 8 Go & 16 Go & 30 Go \\
+\hline
+\end{tabular}
+\caption{Configuration de Xubuntu}
+\end{table}
 
 \subsection{OpenXenManager}
 
