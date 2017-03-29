@@ -77,7 +77,14 @@
 
 \clearpage
 
+\section{Introduction}
 
+Au cours de notre seconde période de projet tutorés, nous avons travaillé avec M.Girardeau sur la “virtualisation d’un équipement d’une classe mobile”. Durant ce projet, nous avons dû tenir à jour une documentation didactique concernant les différentes étapes d’installation, de configuration mais aussi de résolution de problèmes auquel nous avons eut à faire.
+Le wiki de l’installation complète du système vient donc compléter ce rapport puisqu’il contient toutes les étapes beaucoup plus détaillés.\\
+
+\url{http://wiki.info.univ-angers.fr/projets_etudiants:2017_l3pro_eg_virtualisation_classe_mobile}
+
+\clearpage
 
 \section{Présentation de l'existant}
 
@@ -106,8 +113,8 @@ Le schéma ci dessous représente le chariot actuelle :\\
 \clearpage
 \subsection{Objectif du projet}
 
-La finalité de ce projet est de permettre de n’avoir qu’un ordinateur contenant un hyperviseur de machines virtuelles, xenserver et deux machines virtuelle, le pfSense et le Xubuntu.
-Cela permet de réduire le nombre de matériel requis pour le chariot. Au lieu d’avoir deux ordinateurs, tout est pilotables depuis un seul ordinateur et plus facile à gérer. De plus on peut prévoir de futures évolutions grâce à l’ajout de d’autres machines virtuelles au besoin.
+La finalité de ce projet est de permettre de n’avoir qu’un ordinateur contenant un hyperviseur de machines virtuelles, XenServer et deux machines virtuelle : le pfSense et le Xubuntu.
+Cela permet de réduire le nombre de matériel requis pour le chariot. Ainsi, au lieu d’utiliser deux ordinateurs, tout est pilotable depuis un seul ordinateur et donc plus facile à gérer. De plus, on peut prévoir de futures évolutions avec l’ajout d’autres machines virtuelles en fonction des besoins des utilisateurs.
 
 Le schéma ci dessous représente le chariot désiré :\\
 
@@ -121,12 +128,11 @@ Le schéma ci dessous représente le chariot désiré :\\
 
 \paragraph{}
 Concernant ce projet, nous avons séparé celui-ci de deux façons : la première étant l’installation et la seconde étant la recherche. En effet lors des phases d’installation, 
-chacun cherchait de son cotés les différentes manières d’installer les différentes VMs. Suite à ces installations, nous étions souvent menés à chercher des solutions aux différents problèmes que l’on rencontrait (voir problèmes).
+chacun cherchait de son cotés les différentes manières d’installer les différentes VMs. Suite à ces installations, nous étions souvent amenés à chercher des solutions aux différents problèmes que l’on rencontrait (voir problèmes).
 
 \subsection{Partage du travail(GANTT)}
 
-cf annexe 1
-Nous avons donc dû partager le travail. Pour cela nous avons donc défini des axes et avons réparti le travail. Pour cela nous avons un Gantt qui permet de voir ou l’on en ai et ce qu’il reste à faire.\\
+Nous avons donc dû partager le travail. Pour cela nous avons donc défini des axes et avons réparti le travail. Pour cela nous avons un Gantt qui permet de voir ou l’on en ai et ce qu’il reste à faire disponible en annexe(annexe 1).\\
 
 \subsection{Matériel à disposition}
 
@@ -146,20 +152,23 @@ Au fur et à mesure de l’avancement de notre projet nous avons rencontrés des
 \item Un mini hub usb 3 port (brancher 2 tablettes)
 \end{itemize}
 
+\clearpage
+
 \subsection{Réalisation du wiki}
 
-L’une des consignes du projet était aussi de réaliser une page wikipédia contenant les étapes clés du projet, des tutoriels d’installation ou de résolution de problème et l’avancement de projet.
+L’une des consignes du projet était aussi de réaliser une page wikipédia contenant les étapes clés du projet, des tutoriels d’installation ou de résolution de problème et l’avancement de projet.\newline
 Notre tuteur nous a donc ouvert une section sur le wikipédia de l’université d’angers associant nos noms pour obtenir les droit d’écriture.\\
 
 \url{http://wiki.info.univ-angers.fr/projets_etudiants:2017_l3pro_eg_virtualisation_classe_mobile}
 
+\clearpage
 
 \section{Mise en place de l'installation}
 \subsection{XenServer}
 \paragraph{Présentation\\}
 
 
-Xen est un logiciel libre de virtualisation, ou plus précisément un hyperviseur de machine virtuelle basé sur centOS.\\
+XenServer est un logiciel libre de virtualisation, ou plus précisément un hyperviseur de machine virtuelle basé sur centOS.\\
 
 Xen permet d'exécuter plusieurs systèmes d'exploitation (et leurs applications) de manière isolée sur une même machine physique sur un grand nombre de plate-formes. Les systèmes d'exploitation invités partagent ainsi les ressources de la machine hôte.\\
 
@@ -174,7 +183,7 @@ Les premiers tests ont été réalisé avec la version 7.0 de XEN. L’installat
 \includegraphics[scale=0.60]{xenserver18}\\
 \end{center}
 
-L’interface est plutôt sobre et ne permet de que quelques fonctionnalités simples comme le changement d’adresse IP ou le redémarrage de machines virtuelles.. Afin de pouvoir réaliser des opérations complexes comme la création d’une machine virtuelle, il faut utiliser les lignes de commandes ou un client externe dont nous parlerons dans la partie d de ce projet.\\
+L’interface est plutôt sobre et ne permet de que quelques fonctionnalités simples comme le changement d’adresse IP ou le redémarrage de machines virtuelles.. Afin de pouvoir réaliser des opérations complexes comme la création d’une machine virtuelle, il faut utiliser les lignes de commandes ou un client externe dont nous parlerons dans la partie de ce projet.\\
 
 Les lignes de commande sont toutefois essentielles pour certaines fonctionnalités comme l’attribution d’un port USB à une machine virtuelle définit. Dans notre cas, la machine virtuelle Xubuntu devait pouvoir accéder à au moins 1 port USB pour être relié aux hub du chariot.
 
@@ -186,7 +195,7 @@ PfSense est un routeur/pare-feu open source. Il utilise le pare-feu à états Pa
 
 \paragraph{Dans le projet\\}
 
-La machine virtuelle va nous permettre de faire le lien entre le wan et le lan. Le pfsense a deux interfaces réseaux : une qui est la carte réseau de l’ordinateur et l’autre qui est l’adaptateur ethernet/usb. Le pfsense va permettre que Xubuntu puisse avoir un lien vers l’extérieur et donc les tablettes auront accès au wan. 
+La machine virtuelle va nous permettre de faire le lien entre le wan et le lan. Le pfsense a deux interfaces réseaux : une qui est la carte réseau de l’ordinateur et l’autre qui est l’adaptateur ethernet/usb. Le pfsense va permettre que Xubuntu puisse avoir un lien vers l’extérieur et donc les tablettes auront accès au wan. \newline
 PfSense est à la version 2.3.2 qui, au moment de l’installation, était la dernière version stable. Mais une nouvelle version est apparu entre temps la 2.3.3 mais nous n’avons pas mis à jour notre pfSense pour autant. Il y a donc une évolution de Pfsense possible. 
 
 \begin{center}
@@ -221,7 +230,7 @@ Xubuntu est un système d'exploitation libre de type GNU/Linux. C'est un projet 
 
 \paragraph{Dans le projet\\}
 
-Nous utilisons dans notre versions la Xubuntu 16.04, Xenial Xerus qui est la dernière version de Xubuntu. C’est une version 64 bits puisque que l’ordinateur prêté est un 64 bits. De plus les scripts développés par les étudiants sont adaptés pour une machine en 64 bits.
+Nous utilisons dans notre projet la version Xubuntu 16.04, Xenial Xerus qui est la dernière version de Xubuntu. C’est une version 64 bits puisque que l’ordinateur prêté est un 64 bits. De plus les scripts développés par les étudiants sont adaptés pour une machine en 64 bits.
 Le choix de xubuntu est dû au fait que c’est un version plus légère de linux et cela permet sur une machine virtuelle d’économiser les ressources et d’avoir une machine virtuelle plus stable.
 Le xubuntu va nous permettre de voir les tablettes et d’utiliser les script de gestion des tablettes. \\
 Le choix de Xubuntu était imposé dès le début du projet car en prenant une Ubuntu par exemple, il y aurait eu  un problème sur le nombre de tablette détecté par ubuntu. La prise en charge de multiple matériel sur un usb est bloqué à sept sur Ubuntu d'où le choix de Xubuntu pour voir nos 40 tablettes. 
@@ -259,7 +268,8 @@ On peut par exemple créer des VMs, les stopper, les redémarrer. Une alternativ
 
 \paragraph{}
 Dans notre projet final nous avons un ordinateur tournant sous XenServer qui contient les machines virtuelles pfSense et Xubuntu. PfSense a deux cartes réseaux, celle de l’ordinateur pour le lan et l’adaptateur usb/ethernet pour le wan. Deux ports usb de l’ordinateur sont vu par le Xubuntu. En reliant l’ordinateur au chariot, les 40 tablettes ne pas forcément détectées par Xubuntu. Quand on branche les tablettes, sur chaque tablette un message s’affiche. 
-Il faut l’accepter pour autoriser à ce qu’il y est une communication entre le xubuntu et les tablettes. Il faut aussi vérifier que le mode débogage soit bien actif sur les tablettes pour avoir ce message mais aussi pour pouvoir lancer les différents scripts. Nous pouvons utiliser le script des gestions tablettes pour vérifier le nombre de tablettes connectées et celles qui n’y sont pas. 
+Il faut l’accepter pour autoriser à ce qu’il y est une communication entre le xubuntu et les tablettes. Il faut aussi vérifier que le mode débogage soit bien actif sur les tablettes pour avoir ce message mais aussi pour pouvoir lancer les différents scripts. Nous pouvons utiliser le script des gestions tablettes pour vérifier le nombre de tablettes connectées et celles qui n’y sont pas. \\
+
 Le projet final est représenté par le schéma ci dessous :
 
 \clearpage
@@ -271,18 +281,19 @@ Le projet final est représenté par le schéma ci dessous :
 \subsection{Améliorations}
 
 \paragraph{}
-Il y a plusieurs axes d’améliorations possibles. 
-Tout d’abord celui de gérer les bornes wifi depuis PfSense. Il y a déjà une configuration de faite mais pour mettre à jour une configuration de pfSense celui-ci doit avoir accès à internet. C’est pour cela que M.Girardeau a autorisé le pfSense à accéder au réseau de la fac sans authentification. Cela permettra donc de mettre à jour la configuration de pfSense et que les bornes wifi soit prises en compte. 
+Il y a plusieurs axes d’améliorations possibles. \\
+Tout d’abord celui de gérer les bornes wifi depuis PfSense. Il y a déjà une configuration de faite mais pour mettre à jour une configuration de pfSense celui-ci doit avoir accès à internet. C’est pour cela que M.Girardeau a autorisé le pfSense à accéder au réseau de la fac sans authentification. Cela permettra donc de mettre à jour la configuration de pfSense et que les bornes wifi soit prises en compte.\\ 
 Ensuite pour avoir accès à toutes les machines sur un ordinateur il faudrait mettre XenServer en machine virtuelle sous Virtualbox par exemple et ensuite créer les machines virtuelles PfSense et Xubuntu depuis le xenserver. On pourrait ensuite accéder directement depuis le même ordinateur a toutes les machine virtuelles. Néanmoins, ce genre d’installation demanderait un ordinateur un peu plus puissant (surtout en terme de mémoire).
 
+
+\clearpage
 \section{Problèmes rencontrés}
 
 \subsection{Problèmes matériels}
 
 \paragraph{Reconnaissance de la tablette de test\\}
-La tablette n’
-ex :
-était pas reconnu par la machine virtuelle Xubuntu.
+
+La tablette n’était pas reconnu par la machine virtuelle Xubuntu.
 
 Hypothèse :
 \begin{itemize}
