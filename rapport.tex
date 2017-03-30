@@ -79,7 +79,7 @@
 
 \section{Introduction}
 
-Au cours de notre seconde période de projet tutorés, nous avons travaillé avec M.Girardeau sur la “virtualisation d’un équipement d’une classe mobile”. Durant ce projet, nous avons dû tenir à jour une documentation didactique concernant les différentes étapes d’installation, de configuration mais aussi de résolution de problèmes auquel nous avons eut à faire.
+Au cours de notre seconde période de projet tutorés, nous avons travaillé avec M.Girardeau sur la “virtualisation d’un équipement d’une classe mobile”. Durant ce projet, nous avons dû tenir à jour une documentation didactique concernant les différentes étapes d’installation, de configuration mais aussi de résolution de problèmes auquel nous avons eut à faire.\newline
 Le wiki de l’installation complète du système vient donc compléter ce rapport puisqu’il contient toutes les étapes beaucoup plus détaillés.\\
 
 \url{http://wiki.info.univ-angers.fr/projets_etudiants:2017_l3pro_eg_virtualisation_classe_mobile}
@@ -90,10 +90,9 @@ Le wiki de l’installation complète du système vient donc compléter ce rappo
 
 \subsection{Contexte}
 \paragraph{}
-Les étudiants de la faculté des sciences de l’université d’Angers disposent d’un chariot de 40 tablettes (Samsung Galaxy Tab 4) qui permet aux étudiants, lors de travaux pratiques d’Android, d’observer leurs applications sur un support concret autre qu’un émulateur.\\
+Les étudiants de la faculté des sciences de l’université d’Angers disposent d’un chariot de 40 tablettes (Samsung Galaxy Tab 4) qui permet aux étudiants, lors de travaux pratiques d’Android, d’observer leurs applications sur un support concret autre qu’un émulateur.
+Lors des préparations ou aux termes des contrôles continus de cette unité, l’enseignant peut avoir besoin de déposer des fichiers, les récupérer, contrôler les répertoires, accéder aux logs et installer des applications sur les tablettes.\\
 
-
-Lors des préparations ou aux termes des contrôles continus de cette unité, l’enseignant peut avoir besoin de déposer des fichiers, les récupérer, contrôler les répertoires, accéder aux logs et installer des applications sur les tablettes.
 A cet effet, un projet d’étudiant de L3 informatique a été mené en 2015 afin de répondre au cahier des charges précédemment cité. Jérôme FOURMOND et Florentin NOEL ont donc développé une application pour le chariot, une application pc et une application android.\\
 
 L’application chariot permet d’exécuter des scripts qui s’appuient sur sur le kit de développement (SDK) d’android, ADB, et qui possède les même fonctionnalités sauf qu’une marque concrète des événements produits sur la machine est enregistrée.  Elle s'exécute directement dans un terminal et  se comporte comme un serveur, elle reçoit des messages simples et exécute des les scripts associés à ces messages. L’application sert de liaison entre les tablettes et l’application PC.\\
@@ -128,35 +127,35 @@ Le schéma ci dessous représente le chariot désiré :\\
 
 \paragraph{}
 Concernant ce projet, nous avons séparé celui-ci de deux façons : la première étant l’installation et la seconde étant la recherche. En effet lors des phases d’installation, 
-chacun cherchait de son cotés les différentes manières d’installer les différentes VMs. Suite à ces installations, nous étions souvent amenés à chercher des solutions aux différents problèmes que l’on rencontrait (voir problèmes).
+chacun cherchait de son côté les différentes manières d’installer les différentes machines virtuelles mais aussi de leur configuration. Suite à ces installations, nous étions souvent amenés à chercher des solutions aux différents problèmes que l’on rencontrait (voir problèmes).
 
 \subsection{Partage du travail(GANTT)}
 
-Nous avons donc dû partager le travail. Pour cela nous avons donc défini des axes et avons réparti le travail. Pour cela nous avons un Gantt qui permet de voir ou l’on en ai et ce qu’il reste à faire disponible en annexe(annexe 1).\\
+Nous avons donc dû partager le travail. Pour cela nous avons donc défini des axes et avons réparti le travail. Nous avons donc réalisé un diagramme de Gantt qui permet de voir où l’on en était et ce qu’il reste à faire (voir annexe 1).\\
 
 \subsection{Matériel à disposition}
 
-Au départ du projet plusieurs matériels ont été mis à notre disposition :
+Pour mener à bien l’ensemble du projet, M. Éric Girardeau nous a mis a disposition du matériel. Au début du projet nous avions à notre disposition :
 \begin{itemize}
 \item Ordinateur portable HP EliteBook 8540w, i5M560, 4Go de ram
-\item Un adaptateur HP usb/ethernet
-\item Une clé usb 2.0 de 4Go
+\item Un adaptateur HP USB/Ethernet
+\item Une clé USB 2.0 de 4Go
 \item Une tablette Samsung galaxy tab
 \item Une tablette Asus\\
 \end{itemize}
 
-Au fur et à mesure de l’avancement de notre projet nous avons rencontrés des problèmes matériels. C’est pour cela que de nouveaux matériels ont été mis à notre disposition :
+Au fur et à mesure de l’avancement de notre projet nous avons rencontrés quelques problèmes matériels. C’est pour cela que de nouveaux matériels ont été mis à notre disposition :
 \begin{itemize}
 \item Ordinateur portable HP EliteBook 8560w, i7-2620M, 8Go
-\item Un adaptateur Apple usb/ethernet
-\item Un mini hub usb 3 port (brancher 2 tablettes)
+\item Un adaptateur Apple USB/Ethernet
+\item Un mini hub USB 3 port (brancher 2 tablettes)
 \end{itemize}
 
 \clearpage
 
 \subsection{Réalisation du wiki}
 
-L’une des consignes du projet était aussi de réaliser une page wikipédia contenant les étapes clés du projet, des tutoriels d’installation ou de résolution de problème et l’avancement de projet.\newline
+L’une des consignes du projet était aussi de réaliser une page wikipédia contenant les étapes clés du projet, des tutoriels d’installation ou de résolution de problèmes et l’avancement de projet.\newline
 Notre tuteur nous a donc ouvert une section sur le wikipédia de l’université d’angers associant nos noms pour obtenir les droit d’écriture.\\
 
 \url{http://wiki.info.univ-angers.fr/projets_etudiants:2017_l3pro_eg_virtualisation_classe_mobile}
@@ -176,14 +175,14 @@ Xen est un « paravirtualiseur » ou un « hyperviseur » de machines virtuelles
 
 \paragraph{Dans le projet\\}
 
-Pour débuter le projet, le choix de l’hyperviseur Xen à été fait en fonction des consignes notre tuteurs mais il aurait été possible d’utiliser d’autres logiciels libre gratuit équivalent tel que Proxmox. \\
-Les premiers tests ont été réalisé avec la version 7.0 de XEN. L’installation se fait classiquement par le biais d’un ISO sur une clé USB bootable.
+Pour débuter le projet, le choix de l’hyperviseur Xen à été fait en fonction des consignes de notre tuteur mais il aurait été possible d’utiliser d’autres logiciels libres gratuit équivalent tel que Proxmox. \\
+Les premiers tests ont été réalisés avec la version 7.0 de XenServer. L’installation se fait classiquement par le biais d’un ISO sur une clé USB bootable.
 
 \begin{center}
 \includegraphics[scale=0.60]{xenserver18}\\
 \end{center}
 
-L’interface est plutôt sobre et ne permet de que quelques fonctionnalités simples comme le changement d’adresse IP ou le redémarrage de machines virtuelles.. Afin de pouvoir réaliser des opérations complexes comme la création d’une machine virtuelle, il faut utiliser les lignes de commandes ou un client externe dont nous parlerons dans la partie de ce projet.\\
+L’interface est plutôt sobre et ne permet que quelques fonctionnalités simples comme le changement d’adresse IP ou le redémarrage de machines virtuelles etc. Afin de pouvoir réaliser des opérations complexes comme la création d’une machine virtuelle, il faut utiliser les lignes de commandes ou un client externe dont nous parlerons dans la partie d de ce projet.\\
 
 Les lignes de commande sont toutefois essentielles pour certaines fonctionnalités comme l’attribution d’un port USB à une machine virtuelle définit. Dans notre cas, la machine virtuelle Xubuntu devait pouvoir accéder à au moins 1 port USB pour être relié aux hub du chariot.
 
@@ -195,11 +194,12 @@ PfSense est un routeur/pare-feu open source. Il utilise le pare-feu à états Pa
 
 \paragraph{Dans le projet\\}
 
-La machine virtuelle va nous permettre de faire le lien entre le wan et le lan. Le pfsense a deux interfaces réseaux : une qui est la carte réseau de l’ordinateur et l’autre qui est l’adaptateur ethernet/usb. Le pfsense va permettre que Xubuntu puisse avoir un lien vers l’extérieur et donc les tablettes auront accès au wan. \newline
-PfSense est à la version 2.3.2 qui, au moment de l’installation, était la dernière version stable. Mais une nouvelle version est apparu entre temps la 2.3.3 mais nous n’avons pas mis à jour notre pfSense pour autant. Il y a donc une évolution de Pfsense possible. 
+Cette machine virtuelle va nous permettre de faire le lien entre le WAN et le LAN. Le PfSense a deux interfaces réseaux : une qui est la carte réseau de l’ordinateur et l’autre qui est l’adaptateur USB/Ethernet. Le PfSense va permettre à Xubuntu d’avoir un lien vers l’extérieur pour que les tablettes aient un accès au WAN. \newline
+PfSense est à la version 2.3.2 qui, au moment de l’installation, était la dernière version stable. Mais une nouvelle version est apparu entre-temps la 2.3.3 mais nous n’avons pas mis à jour notre pfSense pour autant. Il y a donc une évolution de Pfsense possible.  
 
 \begin{center}
 \includegraphics[scale=0.65]{pfsense}\\
+Page de connexion de pfSense
 \end{center}
 \paragraph{}
 PfSense peut être piloté par une interface web accessible depuis la machine virtuelle Xubuntu. La configuration s’est faite via le fichier de configuration de pfSense utilisé sur l’ancienne version du chariot.\\
@@ -230,11 +230,11 @@ Xubuntu est un système d'exploitation libre de type GNU/Linux. C'est un projet 
 
 \paragraph{Dans le projet\\}
 
-Nous utilisons dans notre projet la version Xubuntu 16.04, Xenial Xerus qui est la dernière version de Xubuntu. C’est une version 64 bits puisque que l’ordinateur prêté est un 64 bits. De plus les scripts développés par les étudiants sont adaptés pour une machine en 64 bits.
+Dans le cadre de notre projet, nous utilisons la versions Xubuntu 16.04 Xenial Xerus qui est la dernière version de Xubuntu. C’est une version 64 bits puisque les scripts développés par les étudiants (en 2015) sont adaptés pour une machine en 64 bits.
 Le choix de xubuntu est dû au fait que c’est un version plus légère de linux et cela permet sur une machine virtuelle d’économiser les ressources et d’avoir une machine virtuelle plus stable.
 Le xubuntu va nous permettre de voir les tablettes et d’utiliser les script de gestion des tablettes. \\
-Le choix de Xubuntu était imposé dès le début du projet car en prenant une Ubuntu par exemple, il y aurait eu  un problème sur le nombre de tablette détecté par ubuntu. La prise en charge de multiple matériel sur un usb est bloqué à sept sur Ubuntu d'où le choix de Xubuntu pour voir nos 40 tablettes. 
-Pour le fonctionnement des scipt le kit de développement (SDK) d’android ADB a été ajouté à la machine.
+Le choix de Xubuntu était imposé dès le début du projet car en prenant une Ubuntu( par exemple), il y aurait eu  un problème sur le nombre de tablette détecté par Ubuntu. La prise en charge de multiples matériels sur un USB est bloqué à sept sur Ubuntu d'où le choix de Xubuntu pour voir nos 42 tablettes. 
+Pour le fonctionnement des scripts le kit de développement (SDK) d’android ADB a été ajouté à la machine.
 
 \paragraph{\\}
 \begin{table}[!h]
@@ -256,8 +256,8 @@ Stockage & 8 Go & 16 Go & 30 Go \\
 \subsection{OpenXenManager}
 
 \paragraph{}
-Travaillant sous Linux il nous fallait un logiciel pouvant se connecter à notre XenServer en ayant une interface graphique de nos machines virtuelles. Sous linux le seul logiciel est openXenManager qui est un logiciel officiel pour un XenServer. Ce dernier permet d’effectuer des actions sur l’hyperviseur et ses machines virtuelles. 
-On peut par exemple créer des VMs, les stopper, les redémarrer. Une alternative à OpenXenManager existe sous Windows nommé XenCenter, on a dû aussi l’utiliser au cours du projet afin d’installer les tools manquants.
+Travaillant sous Linux il nous fallait un logiciel pouvant se connecter à notre serveur Xen en ayant une interface graphique de nos machines virtuelles. Sous linux le seul logiciel est openXenManager qui est un logiciel officiel pour un serveur Xen. Ce dernier permet d’effectuer des actions sur l’hyperviseur et ses machines virtuelles mais aussi d’utiliser les interfaces graphique des différentes machines virtuelles sous le XenServer. 
+On peut par exemple créer des machines virtuelles, les stopper, les redémarrer. Une alternative à OpenXenManager existe sous Windows nommé XenCenter, on a dû aussi l’utiliser au cours du projet afin d’installer les tools manquants.
 
 \begin{center}
 \includegraphics[scale=0.70]{openxenmanager}
@@ -267,8 +267,8 @@ On peut par exemple créer des VMs, les stopper, les redémarrer. Une alternativ
 \subsection{Présentation final du système}
 
 \paragraph{}
-Dans notre projet final nous avons un ordinateur tournant sous XenServer qui contient les machines virtuelles pfSense et Xubuntu. PfSense a deux cartes réseaux, celle de l’ordinateur pour le lan et l’adaptateur usb/ethernet pour le wan. Deux ports usb de l’ordinateur sont vu par le Xubuntu. En reliant l’ordinateur au chariot, les 40 tablettes ne pas forcément détectées par Xubuntu. Quand on branche les tablettes, sur chaque tablette un message s’affiche. 
-Il faut l’accepter pour autoriser à ce qu’il y est une communication entre le xubuntu et les tablettes. Il faut aussi vérifier que le mode débogage soit bien actif sur les tablettes pour avoir ce message mais aussi pour pouvoir lancer les différents scripts. Nous pouvons utiliser le script des gestions tablettes pour vérifier le nombre de tablettes connectées et celles qui n’y sont pas. \\
+Dans notre projet final, nous avons mis en place serveur Xen sur un PC portable (avec XenServer) qui contient les machines virtuelles PfSense et Xubuntu. PfSense a deux cartes réseaux, celle de l’ordinateur pour le LAN et l’adaptateur USB/Ethernet pour le WAN. Deux ports USB de l’ordinateur sont vu par le Xubuntu. En reliant l’ordinateur au chariot, les 42 tablettes n’étaient pas forcément toutes détectées par Xubuntu. 
+En effet, quand on branchait les tablettes, un message s’affichait sur chacune d’entre elles. Il fallait alors l’accepter pour autoriser la communication entre l’ordinateur et les tablettes. Il fallait aussi vérifier que le mode débogage soit bien actif sur les tablettes pour avoir ce message mais aussi pour pouvoir lancer les différents scripts par la suite. Nous pouvons utiliser le script des gestions de tablettes pour vérifier le nombre de tablettes connectées et celles qui n’y sont pas. \\
 
 Le projet final est représenté par le schéma ci dessous :
 
@@ -282,8 +282,9 @@ Le projet final est représenté par le schéma ci dessous :
 
 \paragraph{}
 Il y a plusieurs axes d’améliorations possibles. \\
-Tout d’abord celui de gérer les bornes wifi depuis PfSense. Il y a déjà une configuration de faite mais pour mettre à jour une configuration de pfSense celui-ci doit avoir accès à internet. C’est pour cela que M.Girardeau a autorisé le pfSense à accéder au réseau de la fac sans authentification. Cela permettra donc de mettre à jour la configuration de pfSense et que les bornes wifi soit prises en compte.\\ 
-Ensuite pour avoir accès à toutes les machines sur un ordinateur il faudrait mettre XenServer en machine virtuelle sous Virtualbox par exemple et ensuite créer les machines virtuelles PfSense et Xubuntu depuis le xenserver. On pourrait ensuite accéder directement depuis le même ordinateur a toutes les machine virtuelles. Néanmoins, ce genre d’installation demanderait un ordinateur un peu plus puissant (surtout en terme de mémoire).
+Tout d’abord celui de gérer les bornes wifi depuis PfSense. Il y a déjà une configuration de faite mais pour mettre à jour une configuration de pfSense celui-ci doit avoir accès à internet. Pour cela, M.Girardeau donnera un accès direct au réseau de la fac (sans authentification) pour le PfSense. Cela permettra donc de mettre à jour la configuration de pfSense et que les bornes wifi soit prises en compte.\\ 
+
+Ensuite pour avoir accès à toutes les machines sur un ordinateur il faudrait mettre XenServer en machine virtuelle (sous Virtualbox par exemple) et ensuite créer les machines virtuelles PfSense et Xubuntu depuis le XenServer. On pourrait ensuite accéder directement depuis le même ordinateur a toutes les machine virtuelles. Néanmoins, ce genre d’installation demanderait un ordinateur un peu plus puissant (surtout en terme de mémoire).
 
 
 \clearpage
@@ -361,8 +362,16 @@ Transfert via SSH des ISOs puis reboot de XenServer.
 \clearpage
 
 \section{Conclusion}
-blablablalbla
+Ce projet nous a été proposé par M. Éric Girardeau lors de la seconde période de projets tutorés. Dans ce projet, nous devions mettre en place un serveur Xen sur un PC (de préférence portable) avec deux machines virtuelles. L’une d’elles sert de passerelle PfSense et devra pouvoir importer une configuration existante et l’autre sous Xubuntu qui intégrera le serveur de gestion des tablettes du chariot.\\
 
+Aujourd’hui, nous pensons répondre aux attentes finales du projet c’est-à-dire de pouvoir gérer le chariot de tablettes avec un serveur Xen sur un seul ordinateur. En effet, nous avons réussi à avoir accès à l’ensemble des tablettes ainsi que de lancer les différents scripts permettant la gestion des tablettes.\newline
+Il reste néanmoins quelques modifications possibles pour compléter notre réalisation.
+Tout d’abord, il serait possible de donner accès à Internet au PfSense afin de pouvoir y importer des configurations existantes. Ensuite, il serait possible de tout regrouper sur un seul ordinateur d’une différente manière. Pour cela, il suffirait d’installer directement XenServer sous forme de machine virtuelle (avec par exemple VirtualBox) : une machine virtuelle sous XenServer, et ce XenServer contenant les deux VM sous PfSense et Xubuntu.\\
+
+Ce projet contenait deux principales phases. Une phase d’installation/ configuration et une de recherche de solutions lorsque nous étions confrontés à des problèmes.
+À l’issue de ce projet, nous avons pu travailler en équipe pour essayer de compléter les recherches de chacun. Même si l'intérêt premier des projets tutorés est de mettre à profit ses connaissances afin d’en développer de nouvelles, le fait de travailler directement sur le chariot de tablettes nous a poussés à fournir au final un système qui répond aux conditions et aux attentes de M.Girardeau. Ce projet a donc été intéressant pour tout le groupe puisque notre production a pu être testée et observée sur un cas concret, ce qui nous a donc motivé à rendre ce projet fonctionnel à temps. 
+
+\clearpage
 \section{Références}
 
 Informations/Installation PfSense, Xubuntu et XenServer :
@@ -396,8 +405,17 @@ Adaptateur ethernet :
 
 \section{Annexes}
 
+GIT du projet :
+\url{https://github.com/acherruau/projet2}\\
+
+Wiki de la réalisation du projet :\\ 
+\url{http://wiki.info.univ-angers.fr/projets_etudiants:2017_l3pro_eg_virtualisation_classe_mobile}\\
+
 \begin{center}
 \includegraphics[scale=0.70, angle=270]{Gantt2}
 \end{center}
 
 \end{document}
+\newline
+
+
